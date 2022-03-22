@@ -29,15 +29,12 @@ font-family:noto sans;
   color: #aaaaaa;
   float: right;
   font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
+  font-weight: bold;  
   text-decoration: none;
   cursor: pointer;
 }
+
+
 #span-button {
 cursor:pointer;
 }

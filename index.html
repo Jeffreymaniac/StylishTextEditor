@@ -17,7 +17,7 @@
 
 <div id="emojiModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="emojiClose">&times;</span>
     <p>Add emojis:</p>
     <span onclick="addEmoji('😀')" id="span-button">😀</span>
     <span onclick="addEmoji('😃')" id="span-button">😃</span>
@@ -28,12 +28,18 @@
     <span onclick="addEmoji('🤡')" id="span-button">🤡</span>
     <hr>
     <p>Add icons:</p>
-    <span onclick="addEmoji('<img src="icons/rss.png" alt="RSS Icon" />')" id="span-button"><img src="icons/rss.png" alt="RSS Icon" /></span>
+    <span onclick="addIcon('icons/rss.png')" id="span-button">
+      <img src="icons/rss.png" alt="RSS Icon" />
+    </span>
+    
   </div>
 </div>
 <script>
 function addEmoji(emoji) {
 document.getElementById("text-editor").append(emoji);
+}
+function addIcon(iconurl) {
+document.getElementById("text-editor").append("<img src='" + iconurl + "'>");
 }
 function addDate() {
 document.getElementById("text-editor").append(Date());

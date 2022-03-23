@@ -18,14 +18,7 @@
 <div id="emojiModal" class="modal">
   <div class="modal-content">
     <span class="emojiClose">&times;</span>
-    <p>Add emojis:</p>
-    <span onclick="addEmoji('😀')" id="span-button">😀</span>
-    <span onclick="addEmoji('😃')" id="span-button">😃</span>
-    <span onclick="addEmoji('😄')" id="span-button">😄</span>
-    <span onclick="addEmoji('😡')" id="span-button">😡</span>
-    <span onclick="addEmoji('🤬')" id="span-button">🤬</span>
-    <span onclick="addEmoji('🤠')" id="span-button">🤠</span>
-    <span onclick="addEmoji('🤡')" id="span-button">🤡</span>
+    <html-include src="add-emoji.html"></html-include>
     <hr>
     <p>Add icons:</p>
     <span onclick="addIcon('icons/rss.png')" id="span-button">
@@ -77,5 +70,6 @@ window.onclick = function(event) {
   }
 }
 </script>
+  <script type="module" src='https://unpkg.com/html-include-element'></script>
 </body>
 </html>

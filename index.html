@@ -39,7 +39,9 @@ function addEmoji(emoji) {
 document.getElementById("text-editor").append(emoji);
 }
 function addIcon(iconurl) {
-document.getElementById("text-editor").append("<img src='" + iconurl + "'>");
+  var img = document.createElement("img");
+img.src = iconurl;
+document.getElementById("text-editor").appendChild(img);
 }
 function addDate() {
 document.getElementById("text-editor").append(Date());

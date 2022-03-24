@@ -21,16 +21,10 @@
     <span class="emojiClose">&times;</span>
     <html-include src="add-emoji.html"></html-include>
     <hr>
-    <p>Add icons:</p>
-    <span onclick="addIcon('icons/rss.png')" id="span-button">
-      <img src="icons/rss.png" alt="RSS Icon" />
-    </span>
-        <span onclick="addIcon('icons/youtube.png')" id="span-button">
-      <img src="icons/youtube.png" alt="Youtube Icon" />
-    </span>
-    
+ <html-include src="add-icon.html"></html-include>
   </div>
 </div>
+    
 <script>
 function addEmoji(emoji) {
 document.getElementById("text-editor").append(emoji);

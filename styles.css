@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 * {
-font-family:noto sans;
+font-family:noto sans, calibri, sans-serif;
 }
 .modal {
   display: none; /* Hidden by default */

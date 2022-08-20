@@ -14,6 +14,7 @@
 <button>Add image</button>
 <button id="addEmojis">Add emojis/special characters</button>
 <button onclick="addDate()">Add current date</button>
+    
 <div id="text-editor" contenteditable="true" style="border:2px black solid;height:300px;"></div>
 
 <div id="emojiModal" class="modal">
@@ -25,12 +26,21 @@
   </div>
 </div>
 
+    <button onclick="copyclipboard(document.getElementById('text-editor'))">Copy to clipboard</button>
 <button id="dwn-btn">Download as text file</button>
 <button id="dwn-btn2">Download as HTML file (recommended)</button>
 
     <p>(!) External apps, extensions, etc work with this text editor. For example, Memoji Stickers, Tenor gifs, images, Vome Fonts, or whatever will work because this text editor isn't just designed for text. It is designed for putting images, text, audio, video, or actually anything. You can copy and paste anything into this editor!    </p>
     <p>Credits to <a href="https://github.com/justinfagnani/html-include-element">Justin Fagnani for the HTML include script</a>.</p>
 <script>
+function copyclipboard(text) {
+    
+navigator.clipboard.writeText(text).then(function() {
+  console.log('Async: Copying to clipboard was successful!');
+}, function(err) {
+  console.error('Async: Could not copy text: ', err);
+});
+}
 function addEmoji(emoji) {
 document.getElementById("text-editor").append(emoji);
 }

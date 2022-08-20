@@ -24,6 +24,10 @@
  <html-include src="add-icon.html"></html-include>
   </div>
 </div>
+
+<button id="dwn-btn">Download as text file</button>
+<button id="dwn-btn2">Download as HTML file (recommended)</button>
+
     <p>(!) External apps, extensions, etc work with this text editor. For example, Memoji Stickers, Tenor gifs, images, Vome Fonts, or whatever will work because this text editor isn't just designed for text. It is designed for putting images, text, audio, video, or actually anything. You can copy and paste anything into this editor!    </p>
     <p>Credits to <a href="https://github.com/justinfagnani/html-include-element">Justin Fagnani for the HTML include script</a>.</p>
 <script>
@@ -65,6 +69,59 @@ window.onclick = function(event) {
     emojiModal.style.display = "none";
   }
 }
+    
+    // Download script below
+    
+    // Text save file
+{
+function download(text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', "stylishtexteditor.txt");
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dwn-btn").addEventListener("click", function(){
+ 
+    var text = document.getElementById("text-editor").value;
+    
+    download(text);
+}, false);
+}
+
+
+//HTML save file
+
+{
+function download(text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/html;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', "stylishtexteditor.html");
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dwn-btn2").addEventListener("click", function(){
+ 
+    var text = document.getElementById("text-editor").value;
+    
+    download(text);
+}, false);
+}
+
 </script>
   <script type="module" src='https://unpkg.com/html-include-element'></script>
 </body>
